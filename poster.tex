@@ -6,15 +6,15 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \documentclass[final]{beamer}
-\usepackage[scale=2]{beamerposter}
+\usepackage[orientation=portrait, size=arch, scale=1.3]{beamerposter}
 \usepackage{graphicx}
 \usepackage[noabbrev,capitalize]{cleveref}
 \usepackage{wrapfig}
 \usepackage[sharp]{easylist}
 \usepackage{tikz}
 
-\setlength{\paperwidth}{120cm}
-\setlength{\paperheight}{150cm}
+\setlength{\paperwidth}{36in}
+\setlength{\paperheight}{48in}
 \setlength{\topmargin}{0cm}%
 
 \newlength{\sepwid}
@@ -62,13 +62,14 @@
 % The Poster
 % ----------
 \begin{frame}[fragile,t]
+  \vspace{4cm}
   \begin{minipage}[t][.8\textheight]{\textwidth}
     \begin{columns}
     \begin{column}{0.00\textwidth}
     \end{column}
 
     \begin{column}{0.95\textwidth}
-        \vspace{-2cm}
+        \vspace{-4.8cm}
         \begin{block}{}
         \vspace{-4cm}
         \begin{columns}
@@ -91,8 +92,10 @@ We are using this application to edit manuscripts from the St. Gallen monastery,
             \blockSpace{}
         \end{column}
 
+        \begin{column}{0.00cm}
+        \end{column}
+
         \begin{column}{0.47\textwidth}
-            \vspace{-1cm}
             \begin{block}{The JS MEI Editor (meix.js)}
 
                 \begin{center}
@@ -108,7 +111,7 @@ We are using this application to edit manuscripts from the St. Gallen monastery,
         ## Tabbed view for opening multiple MEI files simultaneously
         # Provides XML validation with custom MEI schemas:
         ## Emscripten$^2$-compiled version of xmllint and WebWorker interface allows validation in the browser
-        ## Custom Node.js server that interfaces with command line xmllint allows online validation
+        ## Custom Node.js server that interfaces with command-line xmllint allows online validation
         # Has a well-documented plugin structure for integration with other applications
                 \end{easylist}
             \end{block}
@@ -117,14 +120,15 @@ We are using this application to edit manuscripts from the St. Gallen monastery,
         \end{columns}
         \end{block}
 
-        \vspace{0cm}
+        \vspace{2cm}
         \begin{block}{}
         \vspace{-5.5cm}
         \begin{columns}
         \begin{column}{0.47\textwidth}
             \begin{block}{}
+            \hspace{-1cm}
                 \centering
-                \includegraphics[scale=1]{mei_editor_diva}
+                \includegraphics[scale=0.75]{mei_editor_diva}
             \end{block}
         \blockSpace{}
         \end{column}
@@ -135,17 +139,19 @@ We are using this application to edit manuscripts from the St. Gallen monastery,
         \begin{column}{0.47\textwidth}
             \begin{block}{}
                 \centering
-                \includegraphics[scale=1]{mei_editor_verovio}
+                \includegraphics[scale=0.75]{mei_editor_verovio}
             \end{block}
             \blockSpace{}
         \end{column}
         \end{columns}
         \end{block}
 
+        \vspace{2cm}
         \begin{block}{}
         \vspace{-3cm}
         \begin{columns}
         \begin{column}{0.47\textwidth}
+            \vspace{-.5cm}
             \begin{block}{St. Gallen}
             \begin{center}
                 \vspace{-0.75\baselineskip}
@@ -153,9 +159,8 @@ We are using this application to edit manuscripts from the St. Gallen monastery,
                 \normalsize
                 \vspace{0.25\baselineskip}
             \end{center}
-
-    \raggedright
-    meix.js synchronizes with a Diva.js$^3$ document viewer pane for editing MEI representations of music manuscripts.
+    
+            meix.js synchronizes with a Diva.js$^3$ document viewer pane for editing MEI representations of music manuscripts.
                 
                 \vspace{0.5\baselineskip}
                 \begin{easylist}[itemize]
@@ -164,32 +169,13 @@ We are using this application to edit manuscripts from the St. Gallen monastery,
     # Dragging/resizing the highlighted areas changes the \att{ulx}/\att{uly}/\att{lrx}/\att{lry} values of the \xml{zone} elements
     # Users can manually create new zones, which are then automatically inserted in the proper location in the MEI
     # Hundreds of pages in a manuscript are linked to corresponding MEI files and automatically loaded
-
-    % \vspace{1cm}
-    % \centering
-    % \includegraphics[scale=1.7]{highlight_atts}
-    % \vspace{.5cm}
-
     # Hovering over a highlight displays all attributes associated with the musical object linked to the \xml{zone}
                 \end{easylist}
-            \end{block}
 
-            \vfill
-
-            \begin{block}{}
+                \vspace{4cm}
                 \centering
-                \raisebox{0.7cm}{\includegraphics[scale=0.15]{images/McGill_logo}}
-                \hspace{1.2cm} 
-                \raisebox{0.1cm}{\includegraphics[scale=0.6]{images/Schulich_logo}}
-                \hspace{0.6cm} 
-                \includegraphics[scale=0.2]{images/CIRMMT_logo}
+                \includegraphics[scale=1.9]{highlight_atts}
 
-                \includegraphics[scale=1.4]{images/SSHRC_logo}
-                \vspace{0.8cm}
-
-                \includegraphics[scale=0.35]{images/ddmal_logo_large}
-                \hspace{1.3cm}
-                \includegraphics[scale=1]{images/SIMSSA_logo}
             \end{block}
         \blockSpace{}
         \end{column}
@@ -198,7 +184,6 @@ We are using this application to edit manuscripts from the St. Gallen monastery,
         \end{column}
 
         \begin{column}{0.47\textwidth}
-            \vspace{-1cm}
             \begin{block}{Verovio}
                 \begin{center}
                     \vspace{-0.75\baselineskip}
@@ -222,10 +207,10 @@ We are using this application to edit manuscripts from the St. Gallen monastery,
             \end{block}
             \blockSpace{}
 
-            \vspace{1cm}
+            \vspace{1.5cm}
 
-            \begin{block}{\large References}
-            \footnotesize
+            \begin{block}{References}
+            \small
             [1] http://ace.c9.io/
 
             [2] http://mozakai.blogspot.ca/2012/03/howto-port-cc-library-to-javascript.html
@@ -238,9 +223,25 @@ We are using this application to edit manuscripts from the St. Gallen monastery,
 
             \vfill
 
-            \begin{block}{\large Acknowledgements}
-            \footnotesize
+            \begin{block}{Acknowledgements}
+            \small
             This research was supported by the Social Sciences and Humanities Research Council of Canada.
+            \end{block}
+
+            \begin{block}{}
+                \centering
+                \raisebox{0.7cm}{\includegraphics[scale=0.12]{images/McGill_logo}}
+                \hspace{1.2cm} 
+                \raisebox{0.1cm}{\includegraphics[scale=0.5]{images/Schulich_logo}}
+                \hspace{0.6cm} 
+                \includegraphics[scale=0.16]{images/CIRMMT_logo}
+
+                \includegraphics[scale=1.4]{images/SSHRC_logo}
+                \vspace{0.8cm}
+
+                \includegraphics[scale=0.3]{images/ddmal_logo_large}
+                \hspace{1.3cm}
+                \includegraphics[scale=0.9]{images/SIMSSA_logo}
             \end{block}
         \end{column}
         \end{columns}
