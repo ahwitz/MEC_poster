@@ -76,9 +76,11 @@
         \begin{column}{0.47\textwidth}
             \vspace{1cm}
             \begin{block}{Motivation}
-The SIMSSA project aims to create searchable representations of musical sources. We have started by identifying neumes in early chant manuscripts via optical music recognition; because the MEI output of the recognition process is not perfectly accurate, we have developed an interface that:
+            \hyphenpenalty=10000{
+The SIMSSA project aims to create searchable representations of musical sources. We have started by identifying neumes in early chant manuscripts via optical music recognition; because the MEI output of the recognition process is not perfectly accurate, we have developed an interface that:}
 
                 \vspace{0.5\baselineskip}
+                \raggedright
                 \begin{easylist}[itemize]
                 \ListProperties(Margin1=0cm)
 # Allows users to edit MEI files manually
@@ -104,9 +106,11 @@ We are using this application to edit manuscripts from the St. Gallen monastery,
                     \normalsize
                     \vspace{0.25\baselineskip}
                 \end{center}
+
+            \raggedright
                 \begin{easylist}[itemize]
                 \ListProperties(Margin1=0cm, Margin2=3cm)
-        # JavaScript library using the ACE Text Editor$^1$:
+        # JavaScript library using the ACE Text Editor:$^1$
         ## ACE features: XML syntax highlighting, find and replace, and code folding, among others
         ## Tabbed view for opening multiple MEI files simultaneously
         # Provides XML validation with custom MEI schemas:
@@ -129,8 +133,9 @@ We are using this application to edit manuscripts from the St. Gallen monastery,
             \hspace{-1cm}
                 \centering
                 \includegraphics[scale=0.75]{mei_editor_diva}
+
+                \small{Figure 1: meix.js with a Diva.js document viewer.}
             \end{block}
-        \blockSpace{}
         \end{column}
 
         \begin{column}{0.00cm}
@@ -140,8 +145,9 @@ We are using this application to edit manuscripts from the St. Gallen monastery,
             \begin{block}{}
                 \centering
                 \includegraphics[scale=0.75]{mei_editor_verovio}
+
+                \small{Figure 3: meix.js with a Verovio-generated score.}
             \end{block}
-            \blockSpace{}
         \end{column}
         \end{columns}
         \end{block}
@@ -151,7 +157,7 @@ We are using this application to edit manuscripts from the St. Gallen monastery,
         \vspace{-3cm}
         \begin{columns}
         \begin{column}{0.47\textwidth}
-            \vspace{-.5cm}
+            \vspace{-0.2cm}
             \begin{block}{St. Gallen}
             \begin{center}
                 \vspace{-0.75\baselineskip}
@@ -160,21 +166,24 @@ We are using this application to edit manuscripts from the St. Gallen monastery,
                 \vspace{0.25\baselineskip}
             \end{center}
     
-            meix.js synchronizes with a Diva.js$^3$ document viewer pane for editing MEI representations of music manuscripts.
+            meix.js synchronizes with a Diva.js$^3$ document viewer pane for editing MEI representations of music manuscripts. (Figure 1)
                 
                 \vspace{0.5\baselineskip}
+                \raggedright
                 \begin{easylist}[itemize]
                 \ListProperties(Margin1=0cm)
     # Editing the MEI \xml{zone} elements changes the positioning and size of the highlighted areas
     # Dragging/resizing the highlighted areas changes the \att{ulx}/\att{uly}/\att{lrx}/\att{lry} values of the \xml{zone} elements
     # Users can manually create new zones, which are then automatically inserted in the proper location in the MEI
     # Hundreds of pages in a manuscript are linked to corresponding MEI files and automatically loaded
-    # Hovering over a highlight displays all attributes associated with the musical object linked to the \xml{zone}
+    # Hovering over a highlight displays all attributes associated with the musical object linked to the \xml{zone} (Figure 2)
                 \end{easylist}
 
-                \vspace{4cm}
+                \vspace{2.7cm}
                 \centering
                 \includegraphics[scale=1.9]{highlight_atts}
+
+                \small{Figure 2: MEI attributes displayed for a custos element.}
 
             \end{block}
         \blockSpace{}
@@ -192,13 +201,14 @@ We are using this application to edit manuscripts from the St. Gallen monastery,
                     \vspace{0.25\baselineskip}
                 \end{center}
 
-    meix.js synchronizes with a Verovio$^4$-generated score with drag-and-drop editing functionality.
+    meix.js synchronizes with a Verovio$^4$-generated score with drag-and-drop editing functionality. (Figure 3)
 
                 \vspace{0.5\baselineskip}
 
+                \raggedright
                 \begin{easylist}[itemize]
                 \ListProperties(Margin1=0cm)
-    # Based on editor prototype at http://rism-ch.github.io/verovio/mei-editor.xhtml
+    # Based on editor prototype at http://rism-ch.github.io/verovio/mei- editor.xhtml
     # Dragging and dropping an element in Verovio re-renders the score and updates the MEI
     # Manually editing the MEI regenerates the score
     # Score automatically paginates by dividing MEI into systems dependent on page width  
@@ -207,41 +217,42 @@ We are using this application to edit manuscripts from the St. Gallen monastery,
             \end{block}
             \blockSpace{}
 
-            \vspace{1.5cm}
-
             \begin{block}{References}
-            \small
             [1] http://ace.c9.io/
 
+            \raggedright
             [2] http://mozakai.blogspot.ca/2012/03/howto-port-cc-library-to-javascript.html
 
             [3] https://ddmal.github.io/diva.js/
 
-            [4] http://rism-ch.github.io/verovio/index.xhtml
+            [4] http://rism-ch.github.io/verovio/
             \end{block}   
 
-
-            \vfill
-
             \begin{block}{Acknowledgements}
-            \small
+                \raggedright
             This research was supported by the Social Sciences and Humanities Research Council of Canada.
             \end{block}
 
+            \vspace{-2cm}
+
             \begin{block}{}
                 \centering
-                \raisebox{0.7cm}{\includegraphics[scale=0.12]{images/McGill_logo}}
-                \hspace{1.2cm} 
-                \raisebox{0.1cm}{\includegraphics[scale=0.5]{images/Schulich_logo}}
-                \hspace{0.6cm} 
+                \hspace{-2.5cm}
+                \raisebox{0.5cm}{\includegraphics[scale=0.12]{images/McGill_logo}}
+                \hspace{2.4cm} 
+                \includegraphics[scale=0.5]{images/Schulich_logo}
+                \hspace{1.8cm} 
                 \includegraphics[scale=0.16]{images/CIRMMT_logo}
 
-                \includegraphics[scale=1.4]{images/SSHRC_logo}
-                \vspace{0.8cm}
+                \vspace{0.6cm}
+                \hspace{-2.5cm}
+                \includegraphics[scale=1.47]{images/SSHRC_logo}
+                \vspace{0.2cm}
 
+                \hspace{-2.5cm}
                 \includegraphics[scale=0.3]{images/ddmal_logo_large}
                 \hspace{1.3cm}
-                \includegraphics[scale=0.9]{images/SIMSSA_logo}
+                \raisebox{-0.1cm}{\includegraphics[scale=0.9]{images/SIMSSA_logo}}
             \end{block}
         \end{column}
         \end{columns}
@@ -252,6 +263,10 @@ We are using this application to edit manuscripts from the St. Gallen monastery,
 \begin{column}{0.00\textwidth}
 \end{column}
 \end{columns}
+\begin{center}
+    \footnotesize
+    Presented at the 2015 Music Encoding Conference, Florence, Italy, 18--21 May 2015
+\end{center}
 \end{minipage}
 \end{frame}
 \end{document}
